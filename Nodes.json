@@ -1,0 +1,144 @@
+{
+   "name":"example name",
+   "timeStepSec":60,
+   "energyUnit":"Wh",
+   "zones":[
+      {
+         "name":"Zone1",
+         "description":"Zone 1 on diagram",
+         "portsVIMult":[
+            [
+               "V1",
+               "I1",
+               "-1"
+            ],
+            [
+               "V2",
+               "I2",
+               "-1"
+            ],
+            [
+               "Ones",
+               "P3",
+               "-1"
+            ],
+            [
+               "V4",
+               "I4",
+               "-1"
+            ]
+         ],
+         "assumedZoneStandbyDC":10,
+         "assumedZoneStandbyAC":10
+      }
+   ],
+   "subcircuits":[
+      {
+         "name":"Grid4",
+         "subcircuitType":"grid",
+         "portVIMult":[
+            "V1",
+            "I1",
+            "1"
+         ],
+         "branches":[
+            {
+               "name":"grid",
+               "converterTagDC":"Grid Tie Inverter",
+               "converterMaxPowerDC":1.25,
+               "converterMaxPowerDCType":"oversizeRatio",
+               "assumedBranchStandbyDC":0.9,
+               "converterTagAC":"1"
+            }
+         ]
+      },
+      {
+         "name":"PV1",
+         "description":"PV1 input",
+         "subcircuitType":"source",
+         "portVIMult":[
+            "V4",
+            "I4",
+            "1"
+         ],
+         "branches":[
+            {
+               "name":"solar",
+               "converterTagDC":"Power Optimizer H",
+               "converterMaxPowerDC":1.25,
+               "converterMaxPowerDCType":"oversizeRatio",
+               "assumedBranchStandbyDC":0.1,
+               "converterTagAC":"String Inverter H",
+               "converterMaxPowerAC":1.25,
+               "converterMaxPowerACType":"oversizeRatio",
+               "assumedBranchStandbyAC":0.1
+            }
+         ]
+      },
+      {
+         "name":"Light2",
+         "description":"Light string branches",
+         "subcircuitType":"load",
+         "portVIMult":[
+            "V2",
+            "I2",
+            "1"
+         ],
+         "branches":[
+            {
+               "name":"light string 1",
+               "powerFraction":0.6,
+               "converterTagDC":"DC-DC LED Driver LL",
+               "converterMaxPowerDC":0.75,
+               "converterMaxPowerDCType":"percentage",
+               "assumedBranchStandbyDC":0.5,
+               "wireLengthDC":20,
+               "wireGaugeDC":"12",
+               "converterTagAC":"Rectifier LED LL",
+               "converterMaxPowerAC":0.75,
+               "converterMaxPowerACType":"percentage",
+               "assumedBranchStandbyAC":0.5,
+               "wireLengthAC":20,
+               "wireGaugeAC":"12"
+            },
+            {
+               "name":"light string 2",
+               "powerFraction":0.4,
+               "converterTagDC":"DC-DC LED Driver LL",
+               "converterMaxPowerDC":0.75,
+               "converterMaxPowerDCType":"percentage",
+               "assumedBranchStandbyDC":0.5,
+               "wireLengthDC":20,
+               "wireGaugeDC":"12",
+               "converterTagAC":"Rectifier LED LL",
+               "converterMaxPowerAC":0.75,
+               "converterMaxPowerACType":"percentage",
+               "assumedBranchStandbyAC":0.5,
+               "wireLengthAC":20,
+               "wireGaugeAC":"12"
+            }
+         ]
+      },
+      {
+         "name":"Fan3",
+         "subcircuitType":"load",
+         "portVIMult":[
+            "Ones",
+            "P3",
+            "1"
+         ],
+         "branchTemplate":"fan48",
+         "branchTemplateOverwrite":[
+            {
+               "name":"fan",
+               "assumedBranchStandbyDC":0.5,
+               "wireLengthDC":20,
+               "wireGaugeDC":"14",
+               "assumedBranchStandbyAC":0.5,
+               "wireLengthAC":20,
+               "wireGaugeAC":"14"
+            }
+         ]
+      }
+   ]
+}

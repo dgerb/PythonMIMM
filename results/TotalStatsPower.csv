@@ -1,0 +1,56 @@
+Experiment,exampleData
+Total Loss DC (Wh),12.985963637178733
+Total Loss AC (Wh),37.025587703185714
+Total Load (Wh),235.6302687222311
+Efficiency DC,94.7767032289325
+Efficiency AC,86.42039522326792
+DC Loss (Wh) ------------------,------------------------------------
+Zone Converter,0.0
+Zone Standby,0.0
+Branch Converter,6.237163637178734
+Branch Standby,2.5
+Branch Wire,4.248799999999999
+Zone1/converter,0.0
+Zone1/standby,0.0
+Grid4/grid/converter,3.083593975571491
+Grid4/grid/standby,0.8999999999999989
+Grid4/grid/wire,0.0
+PV1/solar/converter,0.28383838383838067
+PV1/solar/standby,0.09999999999999991
+PV1/solar/wire,0.0
+Light2/light string 1/converter,1.7248595364273882
+Light2/light string 1/standby,0.5
+Light2/light string 1/wire,0.37440000000000023
+Light2/light string 2/converter,1.144871741341468
+Light2/light string 2/standby,0.5
+Light2/light string 2/wire,0.16640000000000002
+Fan3/fan/converter,0.0
+Fan3/fan/standby,0.5
+Fan3/fan/wire,3.707999999999999
+AC Loss (Wh) ------------------,------------------------------------
+Zone Converter,0.0
+Zone Standby,10.0
+Branch Converter,24.60624523749642
+Branch Standby,1.5999999999999994
+Branch Wire,0.819342465689284
+Zone1/converter,0.0
+Zone1/standby,10.0
+Grid4/grid/converter,0.0
+Grid4/grid/standby,0.0
+Grid4/grid/wire,0.0
+PV1/solar/converter,0.7773535353535342
+PV1/solar/standby,0.09999999999999991
+PV1/solar/wire,0.0
+Light2/light string 1/converter,4.972658646685255
+Light2/light string 1/standby,0.5
+Light2/light string 1/wire,0.06787833537030875
+Light2/light string 2/converter,3.300591290882153
+Light2/light string 2/standby,0.5
+Light2/light string 2/wire,0.03015405044998492
+Fan3/fan/converter,15.555641764575505
+Fan3/fan/standby,0.5
+Fan3/fan/wire,0.7213100798689915
+Load (Wh) ------------------,------------------------------------
+Light2/light string 1,55.37514046357263
+Light2/light string 2,36.755128258658516
+Fan3/fan,143.5
